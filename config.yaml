@@ -1,0 +1,58 @@
+data:
+  data_dir: ../data                 # folder containing train.jsonl, dev.jsonl, test.jsonl
+  image_root: ../data               # image paths in the jsonl are resolved relative to this folder
+  splits: {train: train.jsonl, val: dev.jsonl, test: test.jsonl}
+  id_field: id
+  image_field: img
+  text_field: text
+  label_field: label             # test labels may be absent; test AUROC is then skipped
+
+encoders:
+  image_a:
+    modality: image
+    family: clip
+    checkpoint: openai/clip-vit-base-patch16
+    dim: 512
+    pooling: projected pooled output (get_image_features)
+  image_b:
+    modality: image
+    family: dinov2
+    checkpoint: facebook/dinov2-base
+    dim: 768
+    pooling: CLS token after final layer norm (pooler_output)
+  text_a:
+    modality: text
+    family: mean_pool
+    checkpoint: sentence-transformers/all-mpnet-base-v2
+    dim: 768
+    pooling: attention-masked mean over last hidden states
+    max_length: 128
+  text_b:
+    modality: text
+    family: mean_pool
+    checkpoint: FacebookAI/roberta-base
+    dim: 768
+    pooling: attention-masked mean over last hidden states
+    max_length: 128
+
+extract:
+  batch_size: 64
+  num_workers: 4
+  out_dir: features
+
+train:
+  seeds: [0, 1, 2]               # same seed set for every encoder
+  selection_seed: 0              # seed used for the hyperparameter search
+  optimizer: adam
+  epochs: 100
+  batch_size: 256
+  grid:                          # identical 12 point grid for all four experiments
+    lr: [0.0001, 0.001, 0.01]
+    weight_decay: [0.0, 0.0001, 0.01, 0.1]
+  out_dir: runs
+
+analysis:
+  threshold: 0.5
+  n_examples: 5
+  best_image: image_a            # set after looking at validation AUROC
+  best_text: text_a

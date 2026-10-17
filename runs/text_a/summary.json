@@ -1,0 +1,105 @@
+{
+  "encoder": "text_a",
+  "optimizer": "adam",
+  "epochs": 100,
+  "batch_size": 256,
+  "selected": {
+    "lr": 0.01,
+    "weight_decay": 0.1,
+    "val_auroc": 0.648336,
+    "best_epoch": 39
+  },
+  "search": [
+    {
+      "lr": 0.0001,
+      "weight_decay": 0.0,
+      "val_auroc": 0.6281599999999998,
+      "best_epoch": 46
+    },
+    {
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "val_auroc": 0.628176,
+      "best_epoch": 46
+    },
+    {
+      "lr": 0.0001,
+      "weight_decay": 0.01,
+      "val_auroc": 0.62872,
+      "best_epoch": 85
+    },
+    {
+      "lr": 0.0001,
+      "weight_decay": 0.1,
+      "val_auroc": 0.63496,
+      "best_epoch": 85
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "val_auroc": 0.6300319999999999,
+      "best_epoch": 22
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "val_auroc": 0.630088,
+      "best_epoch": 22
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "val_auroc": 0.63212,
+      "best_epoch": 31
+    },
+    {
+      "lr": 0.001,
+      "weight_decay": 0.1,
+      "val_auroc": 0.642352,
+      "best_epoch": 45
+    },
+    {
+      "lr": 0.01,
+      "weight_decay": 0.0,
+      "val_auroc": 0.6287040000000002,
+      "best_epoch": 34
+    },
+    {
+      "lr": 0.01,
+      "weight_decay": 0.0001,
+      "val_auroc": 0.628864,
+      "best_epoch": 34
+    },
+    {
+      "lr": 0.01,
+      "weight_decay": 0.01,
+      "val_auroc": 0.6404240000000001,
+      "best_epoch": 34
+    },
+    {
+      "lr": 0.01,
+      "weight_decay": 0.1,
+      "val_auroc": 0.648336,
+      "best_epoch": 39
+    }
+  ],
+  "runs": [
+    {
+      "seed": 0,
+      "val_auroc": 0.648336,
+      "best_epoch": 39
+    },
+    {
+      "seed": 1,
+      "val_auroc": 0.6488959999999999,
+      "best_epoch": 43
+    },
+    {
+      "seed": 2,
+      "val_auroc": 0.65144,
+      "best_epoch": 98
+    }
+  ],
+  "val_mean": 0.6495573333333333,
+  "val_std": 0.0016543050907657255
+}

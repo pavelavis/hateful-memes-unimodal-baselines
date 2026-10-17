@@ -1,0 +1,18 @@
+# data and large intermediate files
+data/
+features/*/*.npz
+features/*/parts/
+*.zip
+runs_*.log
+__pycache__/
+.venv/
+
+# LaTeX build files
+report/*.aux
+report/*.log
+report/*.bbl
+report/*.blg
+report/*.out
+report/*.fls
+report/*.fdb_latexmk
+report/*.synctex.gz

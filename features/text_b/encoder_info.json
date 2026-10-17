@@ -1,0 +1,10 @@
+{
+  "encoder": "text_b",
+  "modality": "text",
+  "family": "mean_pool",
+  "checkpoint": "FacebookAI/roberta-base",
+  "dim": 768,
+  "pooling": "attention-masked mean over last hidden states",
+  "max_length": 128,
+  "resolved_commit": "e2da8e2f811d1448a5b465c236feacd80ffbac7b"
+}

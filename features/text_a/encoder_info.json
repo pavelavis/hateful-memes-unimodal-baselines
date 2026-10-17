@@ -1,0 +1,10 @@
+{
+  "encoder": "text_a",
+  "modality": "text",
+  "family": "mean_pool",
+  "checkpoint": "sentence-transformers/all-mpnet-base-v2",
+  "dim": 768,
+  "pooling": "attention-masked mean over last hidden states",
+  "max_length": 128,
+  "resolved_commit": "e8c3b32edf5434bc2275fc9bab85f82640a19130"
+}

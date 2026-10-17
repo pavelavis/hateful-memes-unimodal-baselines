@@ -1,0 +1,9 @@
+{
+  "encoder": "image_a",
+  "modality": "image",
+  "family": "clip",
+  "checkpoint": "openai/clip-vit-base-patch16",
+  "dim": 512,
+  "pooling": "projected pooled output (get_image_features)",
+  "resolved_commit": "57c216476eefef5ab752ec549e440a49ae4ae5f3"
+}

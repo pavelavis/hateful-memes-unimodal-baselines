@@ -1,0 +1,7 @@
+torch==2.14.1
+transformers==5.20.1
+numpy>=2.2,<2.6
+scikit-learn>=1.7,<2.0
+pyyaml>=6.0
+pillow>=10.0
+matplotlib>=3.8

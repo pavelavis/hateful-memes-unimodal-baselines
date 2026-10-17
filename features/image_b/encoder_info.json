@@ -1,0 +1,9 @@
+{
+  "encoder": "image_b",
+  "modality": "image",
+  "family": "dinov2",
+  "checkpoint": "facebook/dinov2-base",
+  "dim": 768,
+  "pooling": "CLS token after final layer norm (pooler_output)",
+  "resolved_commit": "f9e44c814b77203eaa57a6bdbbd535f21ede1415"
+}
